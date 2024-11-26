@@ -119,26 +119,20 @@ This tool is intended for research and educational purposes only. It should not 
 
 ## Citation
 
-If you use this project or dataset, please cite the following works:
+If you use this project or dataset in your research, please cite the following papers:
 
-```bibtex
-@article{chowdhury2020can,
-  title={Can AI help in screening viral and COVID-19 pneumonia?},
-  author={Chowdhury, M.E.H. and Rahman, T. and Khandakar, A. and Mazhar, R. and Kadir, M.A. and Mahbub, Z.B. and Islam, K.R. and Khan, M.S. and Iqbal, A. and Al-Emadi, N. and others},
-  journal={IEEE Access},
-  volume={8},
-  pages={132665--132676},
-  year={2020},
-  publisher={IEEE}
-}
+### Primary Dataset Paper
+M.E.H. Chowdhury, T. Rahman, A. Khandakar, R. Mazhar, M.A. Kadir, Z.B. Mahbub, K.R. Islam, M.S. Khan, A. Iqbal, N. Al-Emadi, M.B.I. Reaz, M. T. Islam, "Can AI help in screening viral and COVID-19 pneumonia?" *IEEE Access*, vol. 8, pp. 132665-132676, 2020.  
+DOI: [10.1109/ACCESS.2020.3010287](https://doi.org/10.1109/ACCESS.2020.3010287)
 
-@article{rahman2020exploring,
-  title={Exploring the Effect of Image Enhancement Techniques on COVID-19 Detection using Chest X-ray Images},
-  author={Rahman, T. and Khandakar, A. and Qiblawey, Y. and Tahir, A. and Kiranyaz, S. and Kashem, S.B.A. and Islam, M.T. and Maadeed, S.A. and Zughaier, S.M. and Khan, M.S. and Chowdhury, M.E.},
-  journal={Computers in Biology and Medicine},
-  year={2021}
-}
-```
+### Image Enhancement Study
+T. Rahman, A. Khandakar, Y. Qiblawey, A. Tahir, S. Kiranyaz, S.B.A. Kashem, M.T. Islam, S.A. Maadeed, S.M. Zughaier, M.S. Khan, M.E. Chowdhury, "Exploring the Effect of Image Enhancement Techniques on COVID-19 Detection using Chest X-ray Images." *Computers in Biology and Medicine*, vol. 132, pp. 104319, 2021.  
+DOI: [10.1016/j.compbiomed.2021.104319](https://doi.org/10.1016/j.compbiomed.2021.104319)
+
+### Quick Links
+- [Access the IEEE paper](https://doi.org/10.1109/ACCESS.2020.3010287)
+- [Access the CBM paper](https://doi.org/10.1016/j.compbiomed.2021.104319)
+- [Original Dataset Repository](https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database)
 
 ## License
 
