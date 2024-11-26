@@ -1,3 +1,4 @@
 .venv/
 *.zip
 COVID-19_Radiography_Dataset
+prepared_data/
