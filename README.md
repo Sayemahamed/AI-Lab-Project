@@ -49,8 +49,8 @@ All images are in PNG format with 299x299 pixel resolution. The dataset is regul
 
 1. Clone the repository:
 ```bash
-git clone [your-repository-url]
-cd [repository-name]
+git clone https://github.com/Sayemahamed/AI-Lab-Project.git
+cd AI-Lab-Project
 ```
 
 2. Install the required packages:
@@ -89,7 +89,7 @@ streamlit run app.py
 
 ## Features
 
-### Data Processing (`dataset.py`)
+### Data Processing (`data_preparing.ipynb`)
 - Custom PyTorch Dataset implementation
 - Advanced data augmentation techniques
 - Stratified train/validation split
@@ -134,9 +134,13 @@ DOI: [10.1016/j.compbiomed.2021.104319](https://doi.org/10.1016/j.compbiomed.202
 - [Access the CBM paper](https://doi.org/10.1016/j.compbiomed.2021.104319)
 - [Original Dataset Repository](https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database)
 
+## Repository Information
+- GitHub Repository: https://github.com/Sayemahamed/AI-Lab-Project.git
+- Contact: sayemahamed183@gmail.com
+
 ## License
 
-[Your chosen license]
+This project is licensed under the [MIT License](LICENSE).
 
 ## Contributing
 
