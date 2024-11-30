@@ -1,6 +1,10 @@
-# COVID-19 Detection from Chest X-rays
+# 🫁 COVID-19 X-Ray Analysis
+AI-Powered COVID-19 Detection from Chest X-Rays | Research Project
 
-This project implements a deep learning model to detect COVID-19 from chest X-ray images using the COVID-19 Radiography Dataset. The project includes both a PyTorch-based deep learning model and a user-friendly Streamlit web interface for making predictions.
+> ⚕️ **Medical Disclaimer**: This tool is strictly for research and educational purposes only. It should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always consult qualified healthcare professionals for medical guidance.
+
+## Overview
+This project leverages deep learning technology to analyze chest X-ray images for potential COVID-19 indicators using the comprehensive COVID-19 Radiography Dataset. Built with PyTorch and featuring an intuitive Streamlit web interface, this tool demonstrates the potential of AI in medical image analysis while maintaining a focus on research and educational exploration.
 
 ## Dataset
 
@@ -139,10 +143,6 @@ See `requirements.txt` for a complete list of dependencies. Key packages include
 - Pillow for image processing
 - NumPy for numerical computations
 - scikit-learn for data splitting
-
-## Disclaimer
-
-This tool is intended for research and educational purposes only. It should not be used as a substitute for professional medical diagnosis. Always consult with healthcare professionals for medical advice and diagnosis.
 
 ## Citations
 
