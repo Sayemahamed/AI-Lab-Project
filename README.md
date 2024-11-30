@@ -58,6 +58,7 @@ All images are in PNG format with 299x299 pixel resolution. The dataset is regul
 
 #### Model and Data
 - `model.pth`: Pre-trained deep learning model weights (181MB)
+  - Alternative download link: [Download model weights](https://drive.google.com/file/d/16yHvqQNumci1lMAuauXAVfAfhR3qdZAj/view?usp=sharing)
 - `prepared_data/`: Directory containing the preprocessed and augmented dataset
 - `prepared_data.zip`: Compressed version of the preprocessed dataset (513MB)
 
