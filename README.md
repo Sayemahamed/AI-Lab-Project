@@ -1,7 +1,7 @@
-# 🫁 COVID-19 X-Ray Analysis
+# COVID-19 X-Ray Analysis
 AI-Powered COVID-19 Detection from Chest X-Rays | Research Project
 
-> ⚕️ **Medical Disclaimer**: This tool is strictly for research and educational purposes only. It should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always consult qualified healthcare professionals for medical guidance.
+> **Medical Disclaimer**: This tool is strictly for research and educational purposes only. It should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always consult qualified healthcare professionals for medical guidance.
 
 ## Overview
 This project leverages deep learning technology to analyze chest X-ray images for potential COVID-19 indicators using the comprehensive COVID-19 Radiography Dataset. Built with PyTorch and featuring an intuitive Streamlit web interface, this tool demonstrates the potential of AI in medical image analysis while maintaining a focus on research and educational exploration.
@@ -65,6 +65,7 @@ All images are in PNG format with 299x299 pixel resolution. The dataset is regul
   - Alternative download link: [Download model weights](https://drive.google.com/file/d/16yHvqQNumci1lMAuauXAVfAfhR3qdZAj/view?usp=sharing)
 - `prepared_data/`: Directory containing the preprocessed and augmented dataset
 - `prepared_data.zip`: Compressed version of the preprocessed dataset (513MB)
+  - Download link: [Download preprocessed dataset](https://drive.google.com/file/d/1OJ3RFgIwqHOVC5DYefsgM_W2aBdKjXKE/view?usp=sharing)
 
 #### Configuration and Documentation
 - `requirements.txt`: List of Python package dependencies
@@ -88,25 +89,6 @@ cd AI-Lab-Project
 ```bash
 pip install -r requirements.txt
 ```
-
-## Usage
-
-### Training the Model
-
-1. Prepare your dataset in the correct structure:
-```python
-from dataset import get_data_loaders
-
-# Get train and validation data loaders
-train_loader, val_loader = get_data_loaders(
-    data_dir='COVID-19_Radiography_Dataset',
-    batch_size=32,
-    train_split=0.8
-)
-```
-
-2. Train your model and save it as `model.pth`
-
 ### Using the Web Interface
 
 1. Start the Streamlit application:
