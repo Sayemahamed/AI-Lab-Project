@@ -35,15 +35,41 @@ All images are in PNG format with 299x299 pixel resolution. The dataset is regul
 
 ```
 .
-├── COVID-19_Radiography_Dataset/    # Dataset directory
-│   ├── COVID/                       # COVID-19 positive X-rays
-│   └── Normal/                      # Normal chest X-rays
-├── dataset.py                       # Dataset loading and preprocessing
-├── app.py                          # Streamlit web interface
-├── model.pth                       # Trained model weights (after training)
-├── requirements.txt                # Python dependencies
-└── README.md                       # Project documentation
+├── app.py                          # Streamlit web application for model inference
+├── data_preparing.ipynb           # Jupyter notebook for data preprocessing
+├── trainer.ipynb                  # Jupyter notebook for model training
+├── model.pth                      # Trained PyTorch model weights
+├── requirements.txt               # Python package dependencies
+├── LICENSE                        # MIT License file
+├── README.md                      # Project documentation
+├── .gitignore                     # Git ignore rules
+├── assets/                        # Static assets and resources
+├── prepared_data/                 # Directory for preprocessed dataset
+├── prepared_data.zip             # Compressed preprocessed dataset
+└── .venv/                         # Python virtual environment
 ```
+
+### Key Components
+
+#### Application Files
+- `app.py`: Main Streamlit web application that provides the user interface for COVID-19 detection
+- `data_preparing.ipynb`: Notebook containing data preprocessing pipeline, augmentation, and dataset preparation
+- `trainer.ipynb`: Notebook with model architecture, training loop, and evaluation metrics
+
+#### Model and Data
+- `model.pth`: Pre-trained deep learning model weights (181MB)
+- `prepared_data/`: Directory containing the preprocessed and augmented dataset
+- `prepared_data.zip`: Compressed version of the preprocessed dataset (513MB)
+
+#### Configuration and Documentation
+- `requirements.txt`: List of Python package dependencies
+- `README.md`: Comprehensive project documentation
+- `LICENSE`: MIT License file
+- `.gitignore`: Specifies which files Git should ignore
+
+#### Resources
+- `assets/`: Directory containing static resources like images and styles
+- `.venv/`: Python virtual environment directory containing project dependencies
 
 ## Installation
 
