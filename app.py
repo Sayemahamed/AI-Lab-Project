@@ -78,10 +78,17 @@ class NEURAL_NETWORK(nn.Module):
 # Load and prepare model
 @st.cache_resource
 def load_model():
-    model = NEURAL_NETWORK()
-    model.load_state_dict(torch.load('model.pth', map_location=torch.device('cpu'), weights_only=True))
-    model.eval()
-    return model
+    try:
+        model = NEURAL_NETWORK()
+        state_dict = torch.load('model.pth', map_location='cpu')
+        # Remove any module. prefix from state dict keys
+        state_dict = {k.replace('module.', ''): v for k, v in state_dict.items()}
+        model.load_state_dict(state_dict)
+        model.eval()
+        return model
+    except Exception as e:
+        st.error(f"Error loading model: {str(e)}")
+        return None
 
 model = load_model()
 
@@ -93,6 +100,10 @@ transform = transforms.Compose([
 ])
 
 def process_image(image):
+    if model is None:
+        st.error("Model not loaded properly. Please check the model file.")
+        return None, 0
+        
     if not isinstance(image, Image.Image):
         image = Image.open(image)
     
@@ -103,13 +114,17 @@ def process_image(image):
     image_tensor = transform(image)
     image_tensor = image_tensor.unsqueeze(0)
     
-    with torch.inference_mode():
-        output = model(image_tensor)
-        probabilities = torch.softmax(output, dim=1)
-        predicted_class = torch.argmax(probabilities, dim=1).item()
-        confidence = probabilities[0][predicted_class].item()
-    
-    return predicted_class, confidence * 100
+    try:
+        with torch.inference_mode():
+            output = model(image_tensor)
+            probabilities = torch.softmax(output, dim=1)
+            predicted_class = torch.argmax(probabilities, dim=1).item()
+            confidence = probabilities[0][predicted_class].item()
+        
+        return predicted_class, confidence * 100
+    except Exception as e:
+        st.error(f"Error during prediction: {str(e)}")
+        return None, 0
 
 def main():
     # Sidebar content
@@ -179,30 +194,45 @@ def main():
 
     # Upload Section
     st.subheader("Upload X-Ray Image")
-    uploaded_file = st.file_uploader(
-        "Choose a chest X-ray image",
-        type=["png", "jpg", "jpeg"],
-        help="Upload a clear, front-view chest X-ray image in PNG or JPEG format"
+    
+    # Add input method selection
+    input_method = st.radio(
+        "Choose input method:",
+        ["Upload File", "Use Camera"],
+        horizontal=True,
+        help="Select how you want to input the X-ray image"
     )
+    
+    if input_method == "Upload File":
+        image_source = st.file_uploader(
+            "Choose a chest X-ray image",
+            type=["png", "jpg", "jpeg"],
+            help="Upload a clear, front-view chest X-ray image in PNG or JPEG format"
+        )
+    else:  # Camera option
+        image_source = st.camera_input(
+            "Take a picture of the X-ray",
+            help="Position the X-ray image clearly in front of the camera"
+        )
 
-    if uploaded_file:
+    if image_source:
         try:
             # Create two columns for image and results
             col1, col2 = st.columns([1, 1], gap="medium")
             
             with col1:
-                # Display uploaded image with timestamp to prevent caching
-                image = Image.open(uploaded_file)
+                # Display image with timestamp
+                image = Image.open(image_source)
                 st.image(
                     image, 
-                    caption=f"Uploaded X-Ray ({time.strftime('%H:%M:%S')})", 
+                    caption=f"{'Captured' if input_method == 'Use Camera' else 'Uploaded'} X-Ray ({time.strftime('%H:%M:%S')})", 
                     use_container_width=True
                 )
             
             with col2:
                 with st.spinner("Analyzing X-ray..."):
                     # Process image and get prediction
-                    predicted_class, confidence = process_image(uploaded_file)
+                    predicted_class, confidence = process_image(image_source)
                     
                     # Create result container with custom styling
                     result_container = st.container()
@@ -266,7 +296,7 @@ def main():
     st.divider()
     st.markdown("""
     <div style='text-align: center'>
-        <p>Developed by Sayem Ahamed | <a href="https://github.com/Sayemahamed/AI-Lab-Project">GitHub</a> | <a href="mailto:sayemahamed183@gmail.com">Contact</a></p>
+        <p> <a href="https://github.com/Sayemahamed/AI-Lab-Project">GitHub</a> | <a href="mailto:sayemahamed183@gmail.com">Contact</a></p>
     </div>
     """, unsafe_allow_html=True)
 

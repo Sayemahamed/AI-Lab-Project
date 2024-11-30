@@ -117,22 +117,49 @@ See `requirements.txt` for a complete list of dependencies. Key packages include
 
 This tool is intended for research and educational purposes only. It should not be used as a substitute for professional medical diagnosis. Always consult with healthcare professionals for medical advice and diagnosis.
 
-## Citation
+## Citations
 
-If you use this project or dataset in your research, please cite the following papers:
+### Dataset Citations
 
-### Primary Dataset Paper
+#### COVID-19 Radiography Database
 M.E.H. Chowdhury, T. Rahman, A. Khandakar, R. Mazhar, M.A. Kadir, Z.B. Mahbub, K.R. Islam, M.S. Khan, A. Iqbal, N. Al-Emadi, M.B.I. Reaz, M. T. Islam, "Can AI help in screening viral and COVID-19 pneumonia?" *IEEE Access*, vol. 8, pp. 132665-132676, 2020.  
-DOI: [10.1109/ACCESS.2020.3010287](https://doi.org/10.1109/ACCESS.2020.3010287)
+[![DOI](https://img.shields.io/badge/DOI-10.1109%2FACCESS.2020.3010287-blue)](https://doi.org/10.1109/ACCESS.2020.3010287)
 
-### Image Enhancement Study
+#### Image Enhancement Study
 T. Rahman, A. Khandakar, Y. Qiblawey, A. Tahir, S. Kiranyaz, S.B.A. Kashem, M.T. Islam, S.A. Maadeed, S.M. Zughaier, M.S. Khan, M.E. Chowdhury, "Exploring the Effect of Image Enhancement Techniques on COVID-19 Detection using Chest X-ray Images." *Computers in Biology and Medicine*, vol. 132, pp. 104319, 2021.  
-DOI: [10.1016/j.compbiomed.2021.104319](https://doi.org/10.1016/j.compbiomed.2021.104319)
+[![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.compbiomed.2021.104319-blue)](https://doi.org/10.1016/j.compbiomed.2021.104319)
 
-### Quick Links
-- [Access the IEEE paper](https://doi.org/10.1109/ACCESS.2020.3010287)
-- [Access the CBM paper](https://doi.org/10.1016/j.compbiomed.2021.104319)
-- [Original Dataset Repository](https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database)
+### Dataset Components
+
+The dataset includes images from multiple sources that should be acknowledged:
+
+1. **RSNA Pneumonia Detection Challenge Dataset**  
+   Wang X, Peng Y, Lu L, Lu Z, Bagheri M, Summers RM. ChestX-ray8: Hospital-scale Chest X-ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases. *IEEE CVPR* 2017.  
+   [![DOI](https://img.shields.io/badge/DOI-10.1109%2FCVPR.2017.369-blue)](https://doi.org/10.1109/CVPR.2017.369)
+
+2. **PadChest Dataset**  
+   Bustos A, Pertusa A, Salinas JM, de la Iglesia-Vayá M. PadChest: A large chest x-ray image dataset with multi-label annotated reports. *Medical Image Analysis*, 2020.  
+   [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.media.2020.101797-blue)](https://doi.org/10.1016/j.media.2020.101797)
+
+### Access & Resources
+
+- [COVID-19 Radiography Database on Kaggle](https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database)
+- [IEEE Paper](https://doi.org/10.1109/ACCESS.2020.3010287)
+- [Computers in Biology and Medicine Paper](https://doi.org/10.1016/j.compbiomed.2021.104319)
+
+### How to Cite This Project
+
+If you use this project in your research, please cite it as:
+
+```bibtex
+@software{COVID19_XRay_Detection,
+  author = {Sayem Ahamed},
+  title = {COVID-19 Detection from Chest X-rays},
+  year = {2023},
+  publisher = {GitHub},
+  url = {https://github.com/Sayemahamed/AI-Lab-Project}
+}
+```
 
 ## Repository Information
 - GitHub Repository: https://github.com/Sayemahamed/AI-Lab-Project.git
